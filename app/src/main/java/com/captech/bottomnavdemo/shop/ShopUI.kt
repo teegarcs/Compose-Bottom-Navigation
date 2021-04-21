@@ -6,7 +6,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun ShopScreen() {
-    // ViewModel scoped to Composable, will reset every time composable is removed and added again
+    // ViewModel scoped to BackStackEntry, will reset every time composable is removed and added again
     val shopVM: ShopVM = viewModel()
     BuildShop(state = shopVM.shopState.value)
 }

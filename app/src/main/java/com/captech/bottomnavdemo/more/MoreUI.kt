@@ -13,7 +13,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun MoreScreen() {
-    // ViewModel scoped to Composable, will reset every time composable is removed and added again
+    // ViewModel scoped to BackStackEntry, will reset every time composable is removed and added again
     val moreVM: MoreVM = viewModel()
     BuildMore(state = moreVM.moreState.value, moreVM::processIntent)
 }

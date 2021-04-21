@@ -8,7 +8,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun HomeScreen() {
-    // ViewModel scoped to Composable, will reset every time composable is removed and added again
+    // ViewModel scoped to BackStackEntry, will reset every time composable is removed and added again
     val homeVM: HomeVM = viewModel()
     BuildHome(state = homeVM.homeState.value)
 }
